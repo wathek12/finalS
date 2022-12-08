@@ -1,0 +1,40 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Avis index{% endblock %}
+
+{% block body %}
+
+    <h1 style="text-align: center">Avis index</h1><br><br>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+
+                <th>Description</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for avi in avis %}
+            <tr>
+
+                <td>{{ avi.description }}</td>
+                <td>{{ avi.date ? avi.date|date('Y-m-d') : '' }}</td>
+                <td>{{ avi.categorie.type }}</td>
+                <td>
+                    <a href="{{ path('app_avis_delete', {'id': avi.id}) }}" class="btn btn-danger" style="width: 113px"  >Delete</a>
+                    <a href="{{ path('app_avis_edit', {'id': avi.id}) }}" class="btn btn-secondary">edit</a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

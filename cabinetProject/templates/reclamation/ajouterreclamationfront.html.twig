@@ -1,0 +1,40 @@
+{% extends 'front.html.twig' %}
+
+{% block body %}
+
+    <div id="formreclamtion">
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+
+    <div class="form-group" data-sb-validations="required">
+        {{ form_label(form.type	, 'type reclamation')  }}
+        {{ form_widget(form.type ,{'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'Type reclamation'}} ) }}
+        {{ form_errors(form.type ) }}
+
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.contenu, 'contenu')  }}
+
+        {{ form_widget(form.contenu , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'contenu'}} ) }}
+        {{ form_errors(form.contenu) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.img, 'image')  }}
+
+        {{ form_widget(form.img , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'image '}} ) }}
+        {{ form_errors(form.img) }}
+
+    </div>
+
+
+
+
+
+
+
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

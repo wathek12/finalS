@@ -1,0 +1,67 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#rech tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <h2 style="text-align: center">User list </h2><br><br>
+    <input class="form-control" id="myInput" type="text" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Image</th>
+                <th>Adresse</th>
+                <th>Etat</th>
+                <th>Age</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr id="rech">
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.image }}</td>
+                <td>{{ user.adresse }}</td>
+                {% if user.etat == "0" %}
+                <td>Bloquer</td>
+                {% else %}
+                <td>Debloquer</td>
+                 {% endif %}
+                <td>{{ user.age }}</td>
+                <td>
+                    {% if user.isEnabled %}
+                    <a href="{{ path('bloquer', {'id': user.id}) }}" class="btn btn-danger" style="width: 113px"  >Bloquer</a>
+                    {% else %}
+                    <a href="{{ path('debloquer', {'id': user.id}) }}" class="btn btn-secondary">Debloquer</a>
+                        {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

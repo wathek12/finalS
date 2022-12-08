@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MEDINOVA - Hospital Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ asset('front/img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('front/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('front/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('front/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid py-2 border-bottom d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
+                    <span class="text-body">|</span>
+                    <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>info@example.com</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-body px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-body px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-body px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-body ps-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top bg-white shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor_Online</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{{ path('ajouterreclamationfront') }}" class="nav-item nav-link ">Reclamation</a>
+                    <a href="{{ path('app_avis_indexFront') }}" class="nav-item nav-link">Avis</a>
+                    <a href="{{ path('app_avis_new') }}" class="nav-item nav-link">Add Avis</a>
+                    <a href="price.html" class="nav-item nav-link">Pricing</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                            <a href="team.html" class="dropdown-item">The Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="appointment.html" class="dropdown-item">Appointment</a>
+                            <a href="search.html" class="dropdown-item">Search</a>
+                        </div>
+                    </div>
+                    <a href="{{ path('app_user_edit') }}" class="nav-item nav-link">Profil</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+<!-- Hero Start -->
+<div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row justify-content-start">
+            <div class="col-lg-8 text-center text-lg-start">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Doctor_Online</h5>
+                <h1 class="display-1 text-white mb-md-4">Best Healthcare Solution In Your City</h1>
+                <div class="pt-2">
+                    <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
+                    <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+<!-- About Start -->
+<!-- About End -->
+
+
+<!-- Services Start -->
+<!-- Services End -->
+
+
+<!-- Appointment Start -->
+<div class="container-fluid bg-primary my-5 py-5">
+    <div class="container py-5">
+
+        {% block body %}{% endblock %}
+
+    </div>
+</div>
+<!-- Appointment End -->
+
+
+<!-- Pricing Plan Start -->
+<!-- Pricing Plan End -->
+
+
+<!-- Team Start -->
+<!-- Team End -->
+
+
+<!-- Search Start -->
+<!-- Search End -->
+
+
+<!-- Testimonial Start -->
+<!-- Testimonial End -->
+
+
+<!-- Blog Start -->
+<!-- Blog End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light mt-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                    <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                    <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                        <button class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+                <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                <div class="d-flex">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-md-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<style>
+    /* =============================== CHATBOT ============================= */
+    .nodeco {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .nodeco:hover {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .nodeco:active {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        max-width: 420px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+    }
+
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+        background-color: #fdb819;
+        color: white;
+        padding: 8px 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+    .containe{
+        width : 400px ;
+        height : 400px ;
+        overflow : auto ;
+        border : 1px solid #E6E4E1 ;
+    }
+
+    .bot {
+        background-image: linear-gradient(to bottom right, #FFDB5F,#dc4225);
+        border-radius : 15px ;
+        padding : 4px ;
+        width : 300px ;
+        color : black ;
+        margin : 2px ;
+        border-top-left-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+
+    .botSender {
+        background : #F7E3C3 ;
+        border-radius : 10px ;
+        padding : 4px 6px 4px 6px ;
+        border : 1px solid black ;
+        margin : 2px ;
+        font-size: 15px;
+        font-family : Mark\ Pro,sans-serif;
+
+    }
+
+    .botSender:hover {
+        background : #FFCF84 ;
+        border-radius : 10px ;
+        padding : 4px 6px 4px 6px ;
+        border : 1px solid black ;
+        margin : 2px ;
+        font-size: 15px;
+        font-family : Mark\ Pro,sans-serif;
+    }
+    .botText {
+        margin : 2px ;
+        font
+        color : black ;
+        font-size: 16px;
+        font-family : Mark\ Pro,sans-serif;
+    }
+
+
+    /* ============== CLIENT ================ */
+    .client {
+        background-image: linear-gradient(to bottom right, #FDFCE9,#F5F0AF);
+        border-radius : 15px ;
+        padding : 4px ;
+        width : 300px ;
+        color : black ;
+        margin : 8px ;
+        border-top-right-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        float : right ;
+
+    }
+
+    .cancelButton {
+        padding : 0px 8px 0px 8px ;
+        border : 1px solid black ;
+        background-color : red;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        float : right ;
+        background-image: linear-gradient(to bottom right, #FF7E75,#E9C5C2);
+    }
+
+    .cancelButton:hover {
+        padding : 0px 8px 0px 8px ;
+        border : 1px solid black ;
+        background-color : red;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        float : right ;
+        background-image: linear-gradient(to bottom right, #FF7E75,#E9C5C2);
+    }
+
+
+</style>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+    <div action="/action_page.php" class="form-container">
+        <button class="nodeco cancelButton" onclick="closeForm()">
+            -
+        </button>
+
+
+        <table style="width :60% ; ">
+            <tr>
+                <td valign="center" align="left"><img style="width : 26px ; height : 40px" src="https://www.pngall.com/wp-content/uploads/10/Ethereum-Logo-PNG-HD-Image.png"></td>
+                <td valign="center">
+                    <h4 >Doctor Chatbot</h4>
+                </td>
+
+            </tr>
+        </table>
+
+
+        <label for="msg">
+            <b> </b>
+        </label>
+        <!--textarea placeholder="Type message.." name="msg" required></textarea-->
+
+        <div class="containe" id="chat">
+
+            <div class="bot">
+                <div class="botText">
+                    Hello, how can we help you ?
+                </div>
+                <button class="nodeco botSender" onclick="botReply(this.value)" value="1" id="StoreLocator">Where are we located? </button>
+                <button class="nodeco botSender" onclick="botReply(this.value)" value="2" id="Products">Where can I find the medicine?</button>
+                <button class="nodeco botSender" onclick="botReply(this.value)" value="3" id="EventPublish">How can use this drug  ?</button>
+                <button class="nodeco botSender" onclick="botReply(this.value)" value="4" id="TechNews">Extra orientation News</button>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div style="height : 40px ; ">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+
+
+
+    function botReply(value) {
+        if (value==1) {
+
+// ========== client ==========
+            var containe = document.createElement("div");
+            containe.classList.add('client');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text2 = document.getElementById("StoreLocator").innerHTML ;
+
+            var text = document.createTextNode(text2);
+            message.appendChild(text);
+
+            containe.appendChild(message);
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+            var newElem1 = document.createElement("BR");
+            var newElem2 = document.createElement("BR");
+            var newElem3 = document.createElement("BR");
+            element.appendChild(newElem1) ;
+            element.appendChild(newElem2) ;
+            element.appendChild(newElem3) ;
+
+// ======== bot =================
+
+            var containe = document.createElement("div");
+            containe.classList.add('bot');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text = document.createTextNode("Find us here : ");
+            message.appendChild(text);
+
+            var a = document.createElement('a');
+            var linkText = document.createTextNode("Store Locator");
+            a.appendChild(linkText);
+//a.title = "my title text";
+            a.href = "https://www.google.com/maps/d/viewer?mid=1vPz_rpbucni8MqrTm-v2ohFVsH8&hl=en&ll=34.2192492328612%2C-96.88616350000001&z=6";
+            a.style="color : white ; " ;
+            message.appendChild(a);
+
+            containe.appendChild(message);
+
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+
+
+        } else if (value=="2") {
+// ========== client ==========
+            var containe = document.createElement("div");
+            containe.classList.add('client');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text2 = document.getElementById("Products").innerHTML ;
+
+            var text = document.createTextNode(text2);
+            message.appendChild(text);
+
+            containe.appendChild(message);
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+            var newElem1 = document.createElement("BR");
+            var newElem2 = document.createElement("BR");
+            var newElem3 = document.createElement("BR");
+            element.appendChild(newElem1) ;
+            element.appendChild(newElem2) ;
+            element.appendChild(newElem3) ;
+
+// ======== bot =================
+
+            var containe = document.createElement("div");
+            containe.classList.add('bot');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text = document.createTextNode("Check our best products here : ");
+            message.appendChild(text);
+
+            var a = document.createElement('a');
+            var linkText = document.createTextNode("     Drug-store");
+            a.appendChild(linkText);
+//a.title = "my title text";
+            a.href = "https://pharma-shop.tn/";
+            a.style="color : white ; " ;
+            message.appendChild(a);
+
+            containe.appendChild(message);
+
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+
+        } else if (value=="3") {
+// ========== client ==========
+            var containe = document.createElement("div");
+            containe.classList.add('client');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text2 = document.getElementById("EventPublish").innerHTML ;
+
+            var text = document.createTextNode(text2);
+            message.appendChild(text);
+
+            containe.appendChild(message);
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+            var newElem1 = document.createElement("BR");
+            var newElem2 = document.createElement("BR");
+            var newElem3 = document.createElement("BR");
+            element.appendChild(newElem1) ;
+            element.appendChild(newElem2) ;
+            element.appendChild(newElem3) ;
+
+// ======== bot =================
+
+            var containe = document.createElement("div");
+            containe.classList.add('bot');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text = document.createTextNode("Follow instructions.\n Read all medicine labels and be sure to follow instructions." +
+                "\r\n Take medicine on time"+"\r\n"+"Report problems for any other questions, please click here");
+            message.appendChild(text);
+
+            var a = document.createElement('a');
+            var linkText = document.createTextNode("Medicines Safely as You Age");
+            a.appendChild(linkText);
+//a.title = "my title text";
+            a.href = "https://www.nia.nih.gov/health/taking-medicines-safely-you-age";
+            a.style="color : white ; " ;
+            message.appendChild(a);
+
+            containe.appendChild(message);
+
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+
+
+
+        } else if (value=="4") {
+// ========== client ==========
+            var containe = document.createElement("div");
+            containe.classList.add('client');
+
+            var message = document.createElement("div");
+            message.classList.add('botText');
+
+            var text2 = document.getElementById("TechNews").innerHTML ;
+
+            var text = document.createTextNode(text2);
+            message.appendChild(text);
+
+            containe.appendChild(message);
+            var element = document.getElementById("chat");
+            element.appendChild(containe);
+
+            var newElem1 = document.createElement("BR");
+            var newElem2 = document.createElement("BR");
+            var newElem3 = document.createElement("BR");
+            element.appendChild(newElem1) ;
+            element.appendChild(newElem2) ;
+            element.appendChild(newElem3) ;
+
+// ======== bot =================
+
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://tech-news3.p.rapidapi.com/venturebeat",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "tech-news3.p.rapidapi.com",
+                    "x-rapidapi-key": "0df9a64d4dmshef637b6555ab817p197c06jsn23b1172de7c8"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+
+                var containe = document.createElement("div");
+                containe.classList.add('bot');
+
+                var message = document.createElement("div");
+                message.classList.add('botText');
+
+                let x = Math.floor((Math.random() * 20) + 1);
+
+                var text = document.createTextNode(response[x]['title']);
+
+                message.appendChild(text);
+
+
+                containe.appendChild(message);
+                var element = document.getElementById("chat");
+                element.appendChild(containe);
+
+            });
+
+
+
+        }
+
+    }
+</script>
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('front/lib/easing/easing.min.js') }}"></script>
+<script src="{{ asset('front/lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ asset('front/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('front/lib/tempusdominus/js/moment.min.js') }}"></script>
+<script src="{{ asset('front/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+<script src="{{ asset('front/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+<!-- Template Javascript -->
+<script src="{{ asset('front/js/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{% extends 'front.html.twig' %}
+
+
+{% block body %}
+    {{ form_start(form, { 'attr': {'class': 'rt-form rt-line-form'} })  }}
+    <div class="mb-3">
+        <label for="username" class="form-label">Description</label>
+        {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.description) }}
+    </div>
+    <div>
+        <label class="form-label" for="password">Date</label>
+        {{ form_widget(form.date, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.date) }}
+    </div>
+
+    <div>
+        <label class="form-label" for="password">Categorie</label>
+        {{ form_widget(form.Categorie, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.Categorie) }}
+    </div><br><br>
+
+    <button type="submit" class="btn btn-secondary" style="text-align: center !important;" formnovalidate> Ajouter</button>
+    {{ form_end(form) }}
+
+{% endblock %}

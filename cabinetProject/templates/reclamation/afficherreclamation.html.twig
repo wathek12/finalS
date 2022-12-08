@@ -1,0 +1,113 @@
+{% extends 'back.html.twig' %}
+{% block body %}
+
+
+
+
+    <br><br>
+
+    <input  id="myInput"  type="text" placeholder="search">
+
+
+    <table class="table table-bordered" id="t"  width="100%" cellspacing="0">
+        <thead>
+        <tr>
+<th></th>
+            <th> </th>
+            <th> </th>
+            <th>date</th>
+            <th>type</th>
+            <th>contenu</th>
+            <th>image</th>
+            <th>user</th>
+        </tr>
+        </thead>
+
+        <tbody id="myTable">
+
+
+        {% for i in tablereclamation %}
+            <tr>
+                <td>
+                    <a href="{{ path('pdf',{'id': i.id}) }}">   <img   width="30" src="https://cdn-icons-png.flaticon.com/512/337/337946.png">  </a>
+
+                </td>
+                <td>  <a href="{{ path('modifierreclamation',{'id': i.id}) }}"  class="btn btn-info btn-icon-split">
+                                            <span class="icon text-white-50">
+                        <i class="fas fa-info-circle"></i>
+
+                    </span>
+                        <span class="text">Modifier</span>
+
+                    </a></td>
+                <td><a href="{{ path('supprimerreclamation',{'id': i.id}) }}"><img src="https://img.icons8.com/color/48/000000/trash--v2.png"/></a></td>
+
+
+
+
+                <td>{{(i.date).format('d/m/Y')}}</td>
+
+
+                <td>{{ i.type }}</td>
+                <td>{{ i.contenu }}</td>
+                <td><img src="{{ asset('/back/images/')}}{{ i.img }}" width="100"  /></td>
+                <td>{{ i.user.nom }}</td>
+
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+        <tbody id="search">
+        </tbody>
+
+    </table>
+
+    {{ knp_pagination_render(tablereclamation) }}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels:[
+                    {% for i in tablereclamation %}
+
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Le Mois de creation de Dossier/User',
+                    data: [
+                        {% for i in tablereclamation %}
+                        {{ (i.date).format('d/m/Y') }},
+                        {% endfor %}
+                    ],
+                    borderWidth: 1
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+{% endblock %}
